@@ -1,0 +1,440 @@
+/* LandingPage.css */
+
+/* Container */
+.landing-page {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, hsl(41, 79%, 91%), #e9e5dd);
+  min-height: 100vh;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #c5a98e;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+
+  border-radius: 10px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.company-name {
+  font-size: 1.8rem;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Navbar Buttons: NetraLink-Pro, Explore, Join-US, Sign In */
+.button,
+.btn {
+  background-color: #631919;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-transform: uppercase;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+button.outline {
+  background: transparent;
+  border: 1px solid #631919;
+  color: #631919;
+}
+button:not(.outline) {
+  background: #631919;
+  color: #ffffff;
+
+}
+.nav-item > button:hover,
+.navbar > .btn:hover {
+  background-color: #eb6a7f;
+}
+
+/* Dropdown Menu */
+.nav-item {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 0.5rem;
+  z-index: 100;
+  list-style: none;
+}
+
+.dropdown li {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background: #997070;
+}
+
+/* Video Hero */
+.video-section {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.video-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.video-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Video Buttons: override default for hero */
+.video-buttons button {
+  background-color: #4b0c0c;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 10px;
+}
+
+.video-buttons button:hover {
+  background-color: #c27171;
+}
+
+/* Main Heading */
+.main-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+/* Popular Services Carousel */
+.landing-wrapper {
+  padding: 0 1rem;
+}
+
+.popular-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.scroll-container {
+  position: relative;
+}
+
+.services-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  scroll-behavior: smooth;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0c66ff;
+  color: #993b3b;
+  border: none;
+  border-radius: 60%;
+  width: 1rem;
+  height: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-btn.left {
+  left: 0;
+  
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+.service-card {
+  flex: 0 0 auto;
+  width: 180px;
+  background: #003300;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+}
+
+.service-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.service-card h4 {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* NetraLink-Pro Section */
+.netralink-pro-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #d69898;
+  margin: 40px 40px;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 1rem;
+}
+
+.pro-content {
+  flex: 1 1 250px;
+}
+
+.pro-content h2 {
+  margin-bottom: 0.5rem;
+}
+
+.pro-content p {
+  margin-bottom: 1rem;
+}
+
+.pro-button {
+  background-color: #631919;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-transform: uppercase;
+}
+
+.pro-image {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.pro-image img {
+  max-width: 50%;
+  border-radius: 6px;
+}
+
+/* Info Cards */
+.info-cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+.info-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  flex: 1 1 200px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.info-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Join Now Button */
+.join-now-wrapper {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.join-now-button {
+  font-size: 1rem;
+  background-color: #631919;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+.join-now-button:hover {
+  background-color: #5f816d;
+}
+
+/* Footer */
+.footer-section {
+background: linear-gradient(to right, hsl(41, 79%, 91%), #e9e5dd);  padding: 1rem;
+}
+
+.footer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  margin-left: 100px;
+  margin-right: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-card {
+  flex: 1 1 180px;
+}
+
+.footer-card h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-card ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-card ul li a:hover {
+  text-decoration: underline;
+}
+
+.final-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.footer-brand {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.footer-right {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  margin-right: 50px;
+}
+
+.social-icon {
+  font-size: 1.2rem;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.modal-content button {
+  margin: 0.5rem;
+}
+
+.modal-content .outline {
+  background: transparent;
+  color: #631919;
+  border: 2px solid #631919;
+}
